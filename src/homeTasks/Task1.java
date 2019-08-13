@@ -1,5 +1,6 @@
 package homeTasks;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class Task1 {
@@ -22,7 +23,11 @@ public class Task1 {
         }
         System.out.println(reversed);*/
 
-        //3.
+        //3. Output specified random numbers.
+        int a = 10; //change for any int value
+        for (int i = 0; i < a; i++) {
+            System.out.println(new Random().nextInt());
+        }
 
 
     }
