@@ -112,5 +112,74 @@ public class B {
         System.out.println(Arrays.toString(b));*/
 
         //System.out.println(Arrays.toString(args));
+
+/*        int[] a = {1, 2, 3, 4, 5, 6};
+        int[][] c = {{1, 2, 3},
+                { 4, 5, 6}};
+        int[] b = new int[5];
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
+        for (int i : a) {
+            System.out.println(i);
+        }
+        System.out.println(c[1][2]);*/
+
+
+/*        for (int i = 0; i <10 ; i++) {
+            if (i%2 == 0) continue;
+                System.out.println("i = " + i);
+        }*/
+
+/*        String strInt = "123";
+        String strDouble = "123.456";
+        int x; double y;
+        x = Integer.parseInt(strInt);
+        y = Double.parseDouble(strDouble);
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+        strInt = String.valueOf(x + 1);
+        strDouble = String.valueOf(y + 1);
+        System.out.println("strInt = " + strInt);
+        System.out.println("strDouble = " + strDouble);
+        String str;
+        str = "num=" + 345;
+        System.out.println(str);*/
+
+
+        /*int arr[] = {1, 2, 3, 4, 5};
+        int arr1[] = {5, 6, 7, 8, 9};
+
+        reverseArr(arr1);
+        reverseArr(arr);
+        System.out.println(Arrays.toString(arr));
+        System.out.println(Arrays.toString(arr1));
+
+    }
+
+    private static void reverseArr(int[] arr) {
+        for (int i = 0; i < arr.length / 2; i++) {
+            int temp = arr[i];
+            arr[i] = arr[arr.length -1 -i];
+            arr[arr.length -1 -i]=temp;
+        }*/
+
+        /*
+        //buble-sort
+        int[] data = {7, 9, 0, 7, 6};
+        bubleSort(data);
+        System.out.println(Arrays.toString(data));
+    }
+
+    private static void bubleSort(int[] data) {
+        for (int barrier = data.length -1; barrier >= 0; barrier--) {
+            for (int index = 0; index < barrier; index++) {
+                if (data[index] > data[index+1]){
+                    int temp =  data[index];
+                    data[index] = data[index + 1];
+                    data[index+1]=temp;
+                }
+            }
+        }*/
     }
 }
