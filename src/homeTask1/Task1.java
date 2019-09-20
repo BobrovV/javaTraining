@@ -1,4 +1,4 @@
-package com.company.homeTask1;
+package homeTask1;
 
 import java.util.Random;
 
