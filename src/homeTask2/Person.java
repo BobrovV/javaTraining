@@ -16,8 +16,8 @@ public class Person {
             weight = w;
         }
 
-        public boolean speek(Object1, Object2){
-            if (Object1.gender == "man" & Object2.gender == "man"){
+        public boolean speak(Object Object1, Object Object2){
+            if (Object1.gender == true & Object2.gender == true){
 
             }
             return true;
