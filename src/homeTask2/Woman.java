@@ -1,8 +1,8 @@
 package homeTask2;
 
-public class Woman extends Person{
-    public Object giveBirthToChild(){
+public class Woman{
+    /*public Object giveBirthToChild(){
         return Object;
-    }
+    }*/
 
 }

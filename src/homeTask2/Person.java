@@ -1,17 +1,21 @@
 package homeTask2;
 
+import java.util.Scanner;
+
 public class Person {
-        boolean gender;
-        String name;
-        String surname;
-        float heigh;
+
+    boolean gender;
+    String name;
+    String surname;
+    float height;
+    float weight;
 
     public boolean isGender() {
         return gender;
     }
 
     public void setGender(boolean gender) {
-        this.gender = gender;
+            this.gender = gender;
     }
 
     public String getName() {
@@ -30,12 +34,12 @@ public class Person {
         this.surname = surname;
     }
 
-    public float getHeigh() {
-        return heigh;
+    public float getHeight() {
+        return height;
     }
 
-    public void setHeigh(float heigh) {
-        this.heigh = heigh;
+    public void setHeight(float height) {
+        this.height = height;
     }
 
     public float getWeight() {
@@ -46,15 +50,14 @@ public class Person {
         this.weight = weight;
     }
 
-    float weight;
 
         //Constructor
         Person (boolean g, String n, String s, float h, float w){
-            gender = g;
-            name = n;
-            surname = s;
-            heigh = h;
-            weight = w;
+            setGender(g);
+            setName(n);
+            setSurname(s);
+            setHeight(h);
+            setWeight(w);
         }
 
     public static boolean testCompatibility(boolean gender1, boolean gender2) {
@@ -102,25 +105,53 @@ public class Person {
         return Object;
     }*/
 
+
     @Override
     public String toString() {
         return "Person{" +
                 "gender=" + gender +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", heigh=" + heigh +
+                ", height=" + height +
                 ", weight=" + weight +
                 '}';
     }
 
     public static void main(String[] args) {
-        Person person1 = new Person(true, "Rocky", "Balboa", 180, 80); //gender true = man
-        Person person2 = new Person(true, "Anna", "Doe", 162, 53); // gender false = woman
-        testCompatibility(person1.gender, person2.gender);
-        speak(person1.gender, person2.gender);
+
+            Scanner in = new Scanner(System.in);
+            System.out.println("You have to enter two people. Let's begin");
+            System.out.println("Please enter gender for the first user: woman or man)");
+            String gs = in.nextLine();
+            if (gs.equals("woman")){
+                gs = "false";
+            }
+            else if (gs.equals("man")){
+                gs = "true";
+            }
+            else {
+                System.out.println("You have entered invalid value. Please try again");
+            }
+            boolean g = Boolean.parseBoolean(gs);
+
+            System.out.println("Please enter name: ");
+            String n = in.nextLine();
+
+            System.out.println("Please enter surname: ");
+            String s = in.nextLine();
+
+            System.out.println("Please enter height: ");
+            String hs = in.nextLine();
+            float h = Float.parseFloat(hs);
+
+            System.out.println("Please enter weight: ");
+            String ws = in.nextLine();
+            float w = Float.parseFloat(ws);
+
+            Person person1 = new Person(g, n, s, h, w);
+            System.out.println(person1.toString());
+
+        //testCompatibility(person1.gender, person2.gender);
+        //speak(person1.gender, person2.gender);
     }
-
-
-
-
 }
