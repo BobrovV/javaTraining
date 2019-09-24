@@ -16,21 +16,41 @@ public class Person {
             weight = w;
         }
 
-        public boolean speak(Object Object1, Object Object2){
-            if (Object1.gender == true & Object2.gender == true){
+    public boolean speak(Object obj){
+        if (this.gender == obj.gender){
 
-            }
+        }
+        return true;
+    }
+
+    public boolean tolerate(){
+        if (){
             return true;
         }
+        else {
+            return false;
+        }
 
-        public boolean tolerate(){
-            return boolean;
+    }
+    public boolean spendTimeTogether(){
+        if (){
+            return true;
         }
-        public boolean spendTimeTogether(){
-            return boolean;
+        else {
+            return false;
         }
-        public Object haveRelationships(){
-            return Object;
+    }
+    public Object haveRelationships(){
+        return Object;
+    }
+
+    public static void main(String[] args) {
+        Person person1 = new Person(true, "Rocky", "Balboa", 180, 80); //gender true = man
+        Person person2 = new Person(false, "Anna", "Doe", 162, 53); // gender false = woman
+        person1.speak(person2);
         }
+
+
+
 
 }
