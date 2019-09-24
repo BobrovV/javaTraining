@@ -17,10 +17,12 @@ public class Person {
         }
 
     public boolean speak(Object obj){
-        if (this.gender == obj.gender){
-
+        if (this.gender == false | obj.gender == false){
+            return true;
         }
-        return true;
+        else {
+            return true; // if men need to add probability 0.5;
+        }
     }
 
     public boolean tolerate(){
