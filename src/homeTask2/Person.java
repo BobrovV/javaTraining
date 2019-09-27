@@ -62,7 +62,7 @@ public class Person {
 
     public static boolean testCompatibility(boolean gender1, boolean gender2) {
         if (gender1 == true | gender1 == false | gender2 == true | gender2 == false) {
-            System.out.println("We are people. Compatibility test is in progress. Please wait... \n");
+            System.out.println("Compatibility test is in progress. Please wait... \n We are people.");
             return true;
         } else {
             System.out.println("Compatibility test cannot be started \n");
@@ -72,14 +72,14 @@ public class Person {
 
     public static boolean speak(boolean gender1, boolean gender2){
         if (gender1 == false & gender2 == false){ //gender.false = woman, gender.true = man
-            System.out.println("Speaking test: We are women. We can speak forever");
+            System.out.println("Speaking test: \n We are women. We can speak forever");
             return true;
         }
         else if (gender1 == false | gender2 == false) {
-            System.out.println("Speaking test: One man and one woman. Ok, let's speak a little bit.");
+            System.out.println("Speaking test: \n One man and one woman. Ok, let's speak a little bit.");
             return true;
         } else {
-            System.out.println("Speaking test: We are men. We can speak but we had better go to a pub");
+            System.out.println("Speaking test: \n We are men. We can speak but we had better go to a pub");
             return false;
         }
     }
@@ -108,20 +108,17 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "gender=" + gender +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", height=" + height +
-                ", weight=" + weight +
-                '}';
+        return super.toString();
     }
 
     public static void main(String[] args) {
 
+        Person[] persons = new Person[2];
+        System.out.println("You have to enter two people. Let's begin");
+
+        for (int i = 0; i <persons.length ; i++) {
             Scanner in = new Scanner(System.in);
-            System.out.println("You have to enter two people. Let's begin");
-            System.out.println("Please enter gender for the first user: woman or man)");
+                        System.out.println("Please enter gender for the user"+(i+1)+ ": woman or man");
             String gs = in.nextLine();
             if (gs.equals("woman")){
                 gs = "false";
@@ -148,10 +145,12 @@ public class Person {
             String ws = in.nextLine();
             float w = Float.parseFloat(ws);
 
-            Person person1 = new Person(g, n, s, h, w);
-            System.out.println(person1.toString());
+            persons[i] = new Person(g, n, s, h, w);
+        }
 
-        //testCompatibility(person1.gender, person2.gender);
-        //speak(person1.gender, person2.gender);
+        System.out.println(persons.toString());
+
+        testCompatibility(persons[0].gender, persons[1].gender);
+        speak(persons[0].gender, persons[1].gender);
     }
 }
