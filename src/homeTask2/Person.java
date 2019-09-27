@@ -110,19 +110,24 @@ public class Person {
         Person[] persons = new Person[2];
         System.out.println("You have to enter two people. Let's begin");
 
-        for (int i = 0; i <persons.length ; i++) {
+        for (int i = 0; i < persons.length; i++) {
             Scanner in = new Scanner(System.in);
-                        System.out.println("Please enter gender for the user"+(i+1)+ ": woman or man");
-            String gs = in.nextLine();
-            if (gs.equals("woman")){
-                gs = "false";
-            }
-            else if (gs.equals("man")){
+            System.out.println("Please enter gender for the user" + (i + 1) + ": woman or man");
+            String gs;
+            do {
+                gs = in.nextLine();
+                if (!"man".equals(gs) & !"woman".equals(gs)) {
+                    System.out.println("Please enter correct gender: woman or man");
+                }
+            } while (!"man".equals(gs) & !"woman".equals(gs));
+
+            if (gs.equals("man")) {
                 gs = "true";
             }
             else {
-                System.out.println("You have entered invalid value. Please try again");
+                gs = "false";
             }
+
             boolean g = Boolean.parseBoolean(gs);
 
             System.out.println("Please enter name: ");
