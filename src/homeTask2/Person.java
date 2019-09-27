@@ -105,12 +105,6 @@ public class Person {
         return Object;
     }*/
 
-
-    @Override
-    public String toString() {
-        return super.toString();
-    }
-
     public static void main(String[] args) {
 
         Person[] persons = new Person[2];
@@ -147,8 +141,6 @@ public class Person {
 
             persons[i] = new Person(g, n, s, h, w);
         }
-
-        System.out.println(persons.toString());
 
         testCompatibility(persons[0].gender, persons[1].gender);
         speak(persons[0].gender, persons[1].gender);
